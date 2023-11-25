@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int n;
+   cin >> n;
+
+   int array[n];
+
+   for (int i = 0; i < n; ++i)
+   {
+      cin >> array[i];
+   }
+
+   int total = 0;
+
+   for (int i = 0; i < n; ++i)
+   {
+      total += array[i];
+   }
+
+  double average = (double) total / n;
+
+   int sum = 0;
+   int quantity = 0;
+
+   for (int i = 0; i < n; ++i)
+   {
+      if (array[i] > average)
+      {
+         quantity += 1;
+         sum += array[i];
+      }      
+   }
+
+   cout << sum << " " << quantity;
+
+   return 0;
+}
